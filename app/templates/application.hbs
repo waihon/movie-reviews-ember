@@ -1,7 +1,19 @@
 {{page-title "Movie Reviews in Ember"}}
 
-<div class="container">
-  Hello, World!
-</div>
+<BsNavbar
+  @type="light"
+  @backgroundColor="light"
+  as |navbar|
+>
+  <LinkTo @route="index" class="navbar-brand">Ember-Bootstrap</LinkTo>
+  <navbar.toggle/>
+  <navbar.content>
+    <navbar.nav as |nav|>
+      <nav.item>
+        <nav.link-to @route="index">Home</nav.link-to>
+      </nav.item>
+    </navbar.nav>
+  </navbar.content>
+</BsNavbar>
 
 {{outlet}}
